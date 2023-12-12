@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTAL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="mainstyle.css">
+    <link rel="stylesheet" href="calendar.css">
+    <script src="calendar.js" defer></script>
+    <script src="inquiry.js" defer></script>
+</head>
+<body>
+
+    <div id="INQUIRE-loader">
+    </div>
+
+     <div class="main-container">
+        <div class="navigation-bar">
+            <div class="nav-child1">
+                <h1>PORTAL</h1>
+            </div>
+            <div class="nav-child2">
+                <a href="HomePage.html">Home</a>
+                <a href="Profile.html">Profile</a>
+                <a href="Inquiry.html">Inquire</a>
+                <a href="#" id="out-btn">Logout</a>
+            </div>
+            <div class="nav-child3">
+                <input type="text" placeholder=" Search..">
+            </div>
+        </div>
+        <div class="sub-container">
+            <div class="header">
+                <h1>INQUIRE</h1>
+            </div>
+            <div class="content-container">
+                <div class="left-card">
+                    <div class="card">
+                        <div class="header-card header-default">
+                            <h1>FORM</h1>
+                        </div>
+                        <form class="input-wrap" onsubmit="sendEmail(); reset(); return false;" >
+                            <input id="name" type="name" placeholder=" Enter Name">
+                            <input id="email" type="email" placeholder=" Enter Email">
+                            <input id="contact" type="contact" placeholder=" Enter Contact">
+                            <textarea name="message" id="message" placeholder="Enter message"></textarea>
+                            <button class="submit-btn" type="submit">Send</button>     
+                        </form>
+                    </div>
+                </div>
+                <div class="right-card">
+                    <div class="card card1">
+                        <div id="calendar">
+                            <div id="header">
+                              <span class="prev-month" onclick="prevMonth()">&#10094;</span>
+                              <h1><span id="month"></span> <span id="year"></span></h1>
+                              <span class="next-month" onclick="nextMonth()">&#10095;</span>
+                            </div>
+                            <table id="calendar-table">
+                              <thead>
+                                <tr>
+                                  <th>Sun</th>
+                                  <th>Mon</th>
+                                  <th>Tue</th>
+                                  <th>Wed</th>
+                                  <th>Thu</th>
+                                  <th>Fri</th>
+                                  <th>Sat</th>
+                                </tr>
+                              </thead>
+                              <tbody id="calendar-body">
+                              </tbody>
+                            </table>
+                          </div>
+                    </div>
+                    <div class="card card2">
+                        <div class="header-card2 header-default"><h1>Popular Post</h1></div>
+                        <div class="picture-card2"><img src="pic1.png" alt=""></div>
+                        <div class="picture-card2"><img src="pic2.png" alt=""></div>
+                        <div class="picture-card2"><img src="pic1.png" alt=""></div>
+                    </div>
+                    <div class="card card3">
+                        <div class="header-default">
+                            <h1>Follow Us:</h1>
+                        </div>
+                        <div class="follow-icons">
+                            <a href="https://www.instagram.com/perezjazaelr/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100083051712081"><i class="fa-brands fa-facebook"></i></a>   
+                            <a href="https://www.linkedin.com/in/jazael-remuel-perez-7b3b4b27a/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <h3>@Rizal Technological University</h3>
+                <h3>Developed by <i><a href="https://www.facebook.com/profile.php?id=100083051712081">Jazael Perez</a></i></h3>
+            </div>
+        </div>
+     </div>
+
+     <script src="https://smtpjs.com/v3/smtp.js"></script>
+     <script>
+        function sendEmail(){
+            Email.send({
+            Host : "smtp.gmail.com",
+            Username : "2022-103095@rtu.edu.ph",
+            Password : "matthew1926",
+            To : '2022-103095@rtu.edu.ph',
+            From : document.getElementById("email").value,
+            Subject : "Portal Inquiry",
+            Body : "Name " + document.getElementById("name").value
+                + " <br> Email: " + document.getElementById("email").value
+                + " <br> Phone No.: " + document.getElementById("contact").value
+                + " <br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert("Message Sent Successfully")
+            );
+        }
+     </script>
+</body>
+</html>

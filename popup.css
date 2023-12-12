@@ -1,0 +1,84 @@
+.popup1, .popup2, .popup3{
+    background: rgb(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.popup-content{
+    height: 75%;
+    width: 80%;
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+    padding: 40px 0px;
+    overflow-y: scroll;
+}
+.Hpop-card > *{
+    margin-bottom: 40px;
+}
+.Hpop-header h1{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: var(--fontheader-font-family);
+}
+.Hpop-header p{
+    font-size: 15px;
+    font-style: italic;
+    font-family: var(--font-font-family);
+}
+.Hpop-caption p{
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.Hpop-picture img {
+    object-fit: cover;
+    height: 50%;
+    width: 90%;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Hpop-header{
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Hpop-caption{
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 400px){
+    .popup-content{
+        height: 70%;
+        width: 80%;
+        position: relative;
+        background: #fff;
+        border-radius: 5px;
+        padding: 15px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .Hpop-picture img {
+        object-fit: cover;
+        height: auto;
+        width: 100%;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+

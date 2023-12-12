@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="Login.js" defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="form">
+
+            <div id="pre-loader"></div>
+
+            <div class="header">
+
+            </div>
+            <form class="info-input" action="HomePage.html" method="post" name="form" onsubmit="return validated()">
+                <input autocomplete="off" type="text" placeholder="Email" name="email">
+                <div class="email-error" id="email_error">Please Fill up your Email or Phone</div>
+                <input type="password" placeholder="Password" name="password">
+                <div class="pass-error" id="pass_error">Please Fill up your Password</div>
+                <input type="submit" class="login-button" id="log-btn" value="LOGIN">
+            </form>
+            <div class="line">
+                <div class="lines"></div>
+                <div class="or">
+                    <h2>OR</h2>
+                </div>
+                <div class="lines"></div>
+            </div>
+            <div class="signup">
+                <h2>Don't have an Account?  <span><a href="#">Sign-up</a></span></h2>
+            </div>
+            <div class="header">
+
+        </div>
+    </div>
+</body>
+</html>

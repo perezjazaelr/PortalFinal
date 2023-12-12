@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTAL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="mainstyle.css">
+    <link rel="stylesheet" href="calendar.css">
+    <script src="calendar.js" defer></script>
+    <script src="Profile.js" defer></script>
+    <style>
+        /* PERSONAL INFORMATION */
+        .infos > div:first-child{
+            height: fit-content;
+            width: fit-content;
+        }
+        .infos img{
+            height: 150px;
+            width: 150px;
+            object-fit: cover ;
+            border: 1px solid;
+        }
+        .wrap-infos > div:first-child{
+            height: fit-content;
+            width: fit-content;
+            margin: 35px auto;
+        }
+        .infos > *{
+            height: 6.5vh;
+            width: 100%;
+            border-top: 0.5px  solid rgb(199, 199, 199);
+        }
+        .infos > div:first-child{
+            border: none;
+        }
+        .infor-raw {
+            padding: 15px;
+        }
+        .infor-raw h2{
+            font-size: 15px;
+            font-weight: 300;
+        }
+        .infor-raw span{
+            width: 50px;
+            font-weight: 700;
+            margin-right: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="PROFILE-loader">
+    </div>
+
+     <div class="main-container">
+        <div class="navigation-bar">
+            <div class="nav-child1">
+                <h1>PORTAL</h1>
+            </div>
+            <div class="nav-child2">
+                <a href="HomePage.html">Home</a>
+                <a href="Profile.html">Profile</a>
+                <a href="Inquiry.html">Inquire</a>
+                <a href="#" id="out-btn">Logout</a>
+            </div>
+            <div class="nav-child3">
+                <input type="text" placeholder=" Search..">
+            </div>
+        </div>
+        <div class="sub-container">
+            <div class="header">
+                <h1>PROFILE</h1>
+            </div>
+            <div class="content-container">
+                <div class="left-card">
+                    <div class="card">
+                        <div class="header-card header-default">
+                            <h1>PERSONAL INFORMATION</h1>
+                        </div>
+                        <div class="wrap-infos">
+                            <div class="infos">
+                                <img src="Jaz.png" alt="">
+                            </div>
+                            <div class="infos">
+                                <div class="infor-raw">
+                                    <h2><span>Last Name:</span> <i>Perez</i></h2>
+                                </div>
+                                <div class="infor-raw">
+                                    <h2><span>First Name:</span> <i>Jazael Remuel</i></h2>
+                                </div>
+                                <div class="infor-raw">
+                                    <h2><span>Middle Initial:</span> <i>Cabacungan</i></h2>
+                                </div>
+                            </div>
+                            <div class="infos">
+                                <div class="infor-raw">
+                                    <h2><span>Birthday:</span> <i>August 12, 2003</i></h2>
+                                </div>
+                                <div class="infor-raw">
+                                    <h2><span>Contact:</span> <i>09xxxxxxxxx</i></h2>
+                                </div>
+                                <div class="infor-raw">
+                                    <h2><span>Email:</span> <i>2022-1xxxxx@rtu.edu.ph</i></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-card">
+                    <div class="card card1">
+                        <div id="calendar">
+                            <div id="header">
+                              <span class="prev-month" onclick="prevMonth()">&#10094;</span>
+                              <h1><span id="month"></span> <span id="year"></span></h1>
+                              <span class="next-month" onclick="nextMonth()">&#10095;</span>
+                            </div>
+                            <table id="calendar-table">
+                              <thead>
+                                <tr>
+                                  <th>Sun</th>
+                                  <th>Mon</th>
+                                  <th>Tue</th>
+                                  <th>Wed</th>
+                                  <th>Thu</th>
+                                  <th>Fri</th>
+                                  <th>Sat</th>
+                                </tr>
+                              </thead>
+                              <tbody id="calendar-body">
+                              </tbody>
+                            </table>
+                          </div>
+                    </div>
+                    <div class="card card2">
+                        <div class="header-card2 header-default"><h1>Popular Post</h1></div>
+                        <div class="picture-card2"><img src="pic1.png" alt=""></div>
+                        <div class="picture-card2"><img src="pic2.png" alt=""></div>
+                        <div class="picture-card2"><img src="pic1.png" alt=""></div>
+                    </div>
+                    <div class="card card3">
+                        <div class="header-default">
+                            <h1>Follow Us:</h1>
+                        </div>
+                        <div class="follow-icons">
+                            <a href="https://www.instagram.com/perezjazaelr/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100083051712081"><i class="fa-brands fa-facebook"></i></a>   
+                            <a href="https://www.linkedin.com/in/jazael-remuel-perez-7b3b4b27a/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <h3>@Rizal Technological University</h3>
+                <h3>Developed by <i><a href="https://www.facebook.com/profile.php?id=100083051712081">Jazael Perez</a></i></h3>
+            </div>
+        </div>
+     </div>
+</body>
+</html>
